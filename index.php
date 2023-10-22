@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + JohnDoe main styles -->
 	<link rel="stylesheet" href="./johndoe.css">
-    <link rel="shortcut icon" href="assets/images/favicon.png" />
 
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" >
