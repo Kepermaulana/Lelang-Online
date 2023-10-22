@@ -36,7 +36,7 @@ if($_SESSION['level']=="admin"){
             <div class="row">
                 <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example1">Nama Lengkap</label>
-                  <input type="text" name="nama_lengkap" class="form-control" required/>
+                  <input type="text" name="nama_petugas" class="form-control" required/>
               </div>
 
             <!-- Email input -->

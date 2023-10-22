@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login</title>
+    <!-- -Custom CSS File- -->
+    <link rel="stylesheet" href="css/login1.css" />
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+	<link rel="icon" type="image/png" href="img/add.png" />
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <!-- <link href="css/main.css" rel="stylesheet" media="all"> -->
+  </head>
+  <body>
+ 
+    <section class="container">
+    <?php
+      if(isset($_GET['pesan'])) {
+        if($_GET['pesan']=="gagal") {
+          echo "<div class='alert text-center' >Username dan password tidak sesuai!!!</div>";
+        }
+      }
+    ?>
+      <header>Login Form</header>
+      <form action="p_login.php" method="POST" enctype="multipart/form-data" class="form">
+        <div class="input-box">
+          <label>Username</label>
+          <input type="text" placeholder="Masukkan Username" name="username" required />
+        </div>
+        <div class="input-box">
+          <label>Password</label>
+          <input type="password" placeholder="Masukkan Password" name="password" required />
+        </div>
+        <button type="submit">Login</button>
+        <p class="message">Belum punya akun? <a href="register_masyarakat.php">Buat akun</a></p>
+      </form>
+    </section>
+
+
+
+
+
+    
+    <script src="vendor/jquery/jquery.min.js"></script>
+	<!-- Vendor JS-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script src="vendor/datepicker/moment.min.js"></script>
+	<script src="vendor/datepicker/daterangepicker.js"></script>
+
+	<!-- Main JS-->
+	<script src="js/global.js"></script>
+  </body>
+</html>
