@@ -1,12 +1,11 @@
 <?php
 // Sisipkan konfigurasi dan file database
 require_once '../koneksi.php';
-// require_once '../../config/database.php';
 
 // Periksa apakah petugas masuk atau belum, dan periksa peran petugas
-if (!isset($_SESSION['user_id']) || $_SESSION['level'] !== 'admin') {
-  // header('location: ../login.php');
-  // exit;
+if (!isset($_SESSION['id_petugas']) || $_SESSION['level'] !== 'admin' && 'petugas') {
+//   header('location: ../login.php');
+//   exit;
 }
 
 // Query untuk mendapatkan daftar barang yang dikelola oleh petugas

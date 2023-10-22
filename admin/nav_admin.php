@@ -22,14 +22,24 @@ if($_SESSION['status_login_admin']!=true){
       <a class="navbar-brand" href="#">E-Lelang</a>
     </div>
     <ul class="nav navbar-nav">
-
+    <?php
+          if($_SESSION['level']== 'petugas'){
+        ?>
         <li><a href="home_admin.php">Home</a></li>
         <li><a href="barang.php">Barang</a></li>
         <li><a href="perlelangan.php">History Lelang</a></li>
+        <li><a href="generate-report.php">Generate Report</a></li>
+       
+       <?php
+        }
+        ?>
 
         <?php
           if($_SESSION['level']== 'admin'){
         ?>
+          <li><a href="home_admin.php">Home</a></li>
+          <li><a href="barang.php">Barang</a></li>
+          <li><a href="perlelangan.php">History Lelang</a></li>
           <li><a href="signup.php">Tambah Petugas</a></li>
           <li><a href="generate-report.php">Generate Report</a></li>
 
